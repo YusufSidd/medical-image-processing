@@ -1,0 +1,161 @@
+.fcontainer{
+
+  height: 100vh;
+  display: flex;
+  /* flex-direction: column-reverse; */
+  /* justify-content: flex-end; */
+  /* justify-content: flex-start; */
+  /* justify-content: center; */
+  /* align-items: center;
+  align-items: flex-end;
+  align-items: flex-start; */
+  flex-wrap: wrap; 
+  /* flex-wrap: wrap-reverse; */
+  flex-flow: column wrap; 
+  
+  
+}
+
+.fitem{
+  
+
+  float: right;
+  width: 50%;
+  height: 100%;
+}
+
+.item1{
+  flex:1 ;
+  /* flex-grow: 3; */
+   flex-shrink: 2; 
+
+}
+
+.item2{
+  width: 40%;
+  height: 100%;
+  /* flex-grow: 2; */
+  
+}
+/* .Title {
+  font-family: 'Rubik Distressed', cursive;
+  font-size: 150%;
+} */
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 0em;
+  margin-bottom: 0.125rem;
+  margin-top: 1.5rem;
+}
+
+.mat-body p, .mat-body-1 p, .mat-typography p {
+  
+  margin:12px;
+}
+.signin{
+  margin-top: 1.5rem;
+}
+.bttn{
+  margin-top: 1.5rem;
+}
+
+.handshake-image{
+  width:100%;
+  height: auto;
+}
+
+.main-div mat-card{
+  padding: 0px;
+  
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.login-form{
+  padding: 20px;
+}
+
+.lang{
+  margin-left:80px;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+
+
+.mat-toolbar-single-row {
+  height: 76px;
+  padding: 0;
+}
+.mat-toolbar.mat-primary{
+  background-color: #383a48;
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 1.2em;
+}
+.categ{
+  margin-left: 10px;
+}
+
+.mat-form-field {
+  font-size: medium;
+
+}
+.navbar {
+
+  display: flex;
+  position: fixed;
+
+}
+.sell-button{
+  margin-right: 10px;
+  padding:0px 20px 0px 20px;
+}
+.reg-button{
+  margin-left:9px;
+}
+
+.Title {
+  /* font-family: 'Rubik Distressed', cursive; */
+  font-size: 150%;
+  margin-left: 10px;
+}
+
+.navbar-brand {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.example-form {
+  min-width: 250px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-left: 55px;
+  margin-bottom: 5px;
+}
+
+.example-input {
+  max-width: 100%;
+  width: 200px;
+}
+
+
+.example-full-wid{
+  margin: block end 10px; ;
+}
+
+.signup{
+  margin-left: 10px;
+}

@@ -1,0 +1,93 @@
+
+<!---Start navigation Bar -->
+
+<mat-toolbar class="navbar-expand-lg navbar fixed-top" color="primary">
+
+  <img src="assets/obj1.png" routerLink="" width="50" height="50" class="d-inline-block navbar-brand" alt="logo">
+  <span class="Title" routerLink="">SwapOn
+                </span>
+</mat-toolbar>
+
+<!--- End Navigation Bar -->
+
+
+
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<button type="button" class="btn btn-light" routerLink=""><span class="navbar-brand" class=" col-lg-5 col-md-5 col-sm-5 col-12" >
+  <img src="assets/Objects.png" width="50" height="50" class="d-inline-block" alt="">
+
+</span></button>
+<mat-grid-list cols="2" rowHeight="90vh">
+
+    <mat-grid-tile>
+      <img mat-card-image src="assets/handshake.webp" alt="img" width="90%" height="80%" class="handshake-image">
+    </mat-grid-tile>
+  <mat-grid-tile style="background-color:rgb(252, 250, 250);">
+  
+    <div class="container col-md-6" style="background-color:rgb(252, 250, 250); ">
+    <div fxLayoutAlign="center center" fxLayout.xs="column" class="main-div">
+      <mat-card fxFlex="100">
+        <mat-toolbar color="primary"> <mat-label class="signup">Sign Up</mat-label></mat-toolbar>
+        <!-- <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="userRegister()"> -->
+        
+        <form  fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="registerForm" (ngSubmit)="onRegister()" >
+
+          <mat-form-field class="example-full-wid" appearance="fill">
+            <!-- <mat-label>Name</mat-label> -->
+            <input matInput type="text" class="form-control" formControlName="firstname" name="firstname" placeholder="Name">
+          </mat-form-field>
+
+          <!-- <mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" class="form-control" [(ngModel)]="user.lastname" #lastname="ngModel" name="lastname" placeholder="">
+          </mat-form-field> -->
+
+          <mat-form-field class="example-full-wid" appearance="fill">
+            <!-- <mat-label></mat-label> -->
+            <span matPrefix>+91 &nbsp;</span>
+            <input type="tel" matInput class="form-control" formControlName="contactNo" name="contactNo" minlength="10" maxlength="10" placeholder="XXXXXXXXXX">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <!-- <mat-label>Email</mat-label> -->
+            <input matInput type="email" class="form-control" formControlName="email" name="email" [pattern]="emailPattern" placeholder="Email">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        
+          <mat-form-field appearance="fill">
+            <!-- <mat-label class="pass">Password</mat-label> -->
+            <input matInput [type]="hide ? 'password' : 'text'"  class="form-control" name="password" formControlName="password" [pattern]="passwordPattern" placeholder="Password">
+            <mat-error *ngIf="password.hasError('required')">Password must have at least {{minPw}} characters and a special character</mat-error>
+            <mat-error *ngIf="password.hasError('minlength')">Password must have at least {{minPw}} characters</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <!-- <mat-label class="pass">Confirm Password</mat-label> -->
+            <input matInput [type]="hide ? 'password' : 'text'" class="form-control" name="cpassword" formControlName="cpassword" [pattern]="passwordPattern" placeholder="Confirm Password">
+            <mat-error *ngIf="cpassword.hasError('required')">Passwords don't match</mat-error>
+            <mat-error *ngIf="cpassword.invalid && !cpassword.hasError('required')">Passwords don't match</mat-error>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            
+          </mat-form-field>
+
+          
+          
+          <button mat-raised-button color="primary" [disabled]="!registerForm.valid" type="submit" name="submit-reg" (click)="onRegister()">Sign Up</button>
+
+          <p class="signin">Already have an account? <a routerLink="/login">Sign In</a></p>
+        </form>
+      </mat-card>
+    </div>
+
+
+  </div>
+
+</mat-grid-tile>
+</mat-grid-list>
